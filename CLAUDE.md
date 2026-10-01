@@ -1,7 +1,9 @@
-# Site Manaus Tecnologias — contexto para o Claude
+# Site Harada Tecnologias — contexto para o Claude
 
 ## Sobre o projeto
-Site para divulgar a **Manaus Tecnologias**, a loja de tecnologia do Matheus.
+Site para divulgar a **Harada Tecnologias** (antes "Manaus Tecnologias"), a loja de
+tecnologia do Matheus. O nome homenageia o sobrenome do pai e as origens japonesas.
+Slogan: "Conectando a Amazônia ao Futuro".
 - **Serviços de T.I.:**
   - Formatação de computadores
   - Serviço de backup
@@ -20,42 +22,53 @@ Site para divulgar a **Manaus Tecnologias**, a loja de tecnologia do Matheus.
 - Publicação: **GitHub Pages** (grátis).
 
 ## Contato (já definido)
-- WhatsApp: (92) 99228-2487
+- WhatsApp: (92) 99228-2487 (link `https://wa.me/5592992282487?text=...`)
 - E-mail: matheus.haradati@gmail.com
 - Horário: 24 horas
 
 ## Links
-- Site no ar: https://mharada7.github.io/manaus-tecnologias/
-- Repositório: https://github.com/mharada7/manaus-tecnologias (branch `main`)
+- Site no ar: https://mharada7.github.io/harada-tecnologias/
+- Repositório: https://github.com/mharada7/harada-tecnologias (branch `main`)
 - GitHub Pages publica a partir de `main` / `(root)`: cada `git push` atualiza o site.
+- O endereço antigo (`manaus-tecnologias`) não funciona mais (404).
+- A pasta local continua `C:\ManausTecnologias\site` (não renomeada).
 
 ## A definir (perguntar ao Matheus antes de usar)
 - Preços (exibir ou não no site?)
 - Contato: endereço, redes sociais
-- Domínio (ex.: manaustecnologias.com.br)
+- Domínio (ex.: haradatecnologias.com.br)
 
-## Identidade visual (definida na v0.2)
-- Logo: `img/logo.png` (250x248, fundo branco), cérebro colorido em polígonos.
-- Tema "clean e tecnológico". Paleta em variáveis no `:root` do `style.css`:
-  azul-marinho #14213D (texto), azul #1E6FD9 (principal), ciano #22B8E6,
-  laranja #F7931E (chamada para ação), fundos #FFFFFF / #F5F8FC, texto suave #5B6B82.
-- Fontes (Google Fonts): Montserrat (títulos) e Inter (textos).
+## Identidade visual: tema japonês sutil (desde a v0.4)
+- Imagem: `img/cerebro.png` (760x630, recortada do cartaz da marca; fundo #F6F5F1,
+  igual ao fundo do site). O nome é texto HTML (HARADA / TECNOLOGIAS / 原田テクノロジー).
+- Paleta em variáveis no `:root` do `style.css`: washi #F6F5F1 (fundo),
+  washi-escuro #EFECE6 (seções alternadas), sumi #141B2B (texto), ai #2B4470 (principal),
+  aka #C8102E (destaque/botão), aka-escuro #A50E25, branco, texto-suave #5B6478, linha #DCD7CE.
+- Fontes (Google Fonts): Montserrat 600–800 (títulos), Inter (textos),
+  Noto Serif JP 600 só com os caracteres de 原田テクノロジー (parâmetro `&text=`).
+- Detalhes: carimbo hanko 原田 (`writing-mode: vertical-rl`), cantoneiras (`::before/::after`),
+  linhas vermelhas no slogan e tracinho vermelho sob os `h2`.
 
-## Estado atual: v0.2 (publicada)
-- `index.html`: logo no `<h1>`, seções Serviços, Eletrônicos e Contato (`id="contato"`), rodapé.
-- `style.css`: variáveis, faixa em degradê no topo, seções alternadas (`nth-child(odd)`),
-  cartões em grid responsivo (`.cartoes`; `.produtos` com borda laranja), rodapé azul-marinho.
-- Já aprendido: tags básicas, img/alt, link de CSS, variáveis, box model, seletores
-  (classe, id, `>`, `:hover`, `nth-child`), grid `auto-fit/minmax`, especificidade/cascata,
-  ciclo git add → commit → push.
+## Estado atual: v0.4 (identidade Harada + botão de WhatsApp)
+- `index.html`: cabeçalho com hanko, cérebro e nome; seções Serviços, Eletrônicos e
+  Contato (`id="contato"`, botão `.botao` de WhatsApp); rodapé.
+- `style.css`: variáveis, cabeçalho japonês, seções alternadas (`nth-child(odd)`), cartões em
+  grid responsivo (`.cartoes`; `.produtos` com borda vermelha), botão, `@media (max-width: 480px)`.
+- Testado em 1280px, 375px e 360px (screenshots com Edge headless + iframe).
+- Já aprendido: tags básicas, img/alt (alt vazio em imagem decorativa), span, lang, aria-hidden,
+  link de CSS, variáveis, box model, seletores (classe, id, `>`, `:hover`, `nth-child`),
+  pseudo-elementos, position relative/absolute, clamp, letter-spacing, media query,
+  grid `auto-fit/minmax`, especificidade/cascata, URL encoding, ciclo git add → commit → push,
+  `git remote set-url`.
 
 ## Roadmap
 1. ✅ v0.1: página inicial simples (`index.html`) com nome da loja e contato
 2. ✅ v0.2: estilo com CSS (logo, cores, fontes, layout que funcione no celular)
-3. v0.3: seções de Serviços de T.I. e Eletrônicos
-4. v0.4: botão de WhatsApp e mapa/endereço
+3. v0.3: seções de Serviços de T.I. e Eletrônicos (melhorar com descrições/ícones)
+4. v0.4: ✅ botão de WhatsApp · ✅ identidade Harada · ⬜ mapa/endereço
 5. ✅ v0.5: publicar no GitHub Pages
-6. Futuro: catálogo de produtos, formulário de orçamento, domínio próprio, SEO
+6. v0.6: seção **Cardápios Digitais** com espaço de portfólio (imagens + links)
+7. Futuro: catálogo de produtos, formulário de orçamento, domínio próprio, SEO
 
 ## Como o Claude deve trabalhar comigo
 A metodologia está nas preferências globais (`~/.claude/CLAUDE.md`): iniciante,
