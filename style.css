@@ -112,6 +112,26 @@ section h2 {
     text-align: center;
 }
 
+/* ===== Botão de chamada para ação ===== */
+.botao {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 14px 28px;
+    background-color: var(--laranja);
+    color: var(--azul-marinho);   /* texto escuro: lê melhor sobre o laranja */
+    font-family: var(--fonte-titulo);
+    font-weight: 700;
+    text-decoration: none;        /* tira o sublinhado do link */
+    border-radius: 999px;         /* cantos totalmente arredondados ("pílula") */
+    box-shadow: 0 4px 12px rgba(247, 147, 30, 0.35);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.botao:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(247, 147, 30, 0.45);
+}
+
 /* ===== Rodapé ===== */
 footer {
     background-color: var(--azul-marinho);
