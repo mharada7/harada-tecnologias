@@ -32,16 +32,26 @@ Site para divulgar a **Manaus Tecnologias**, a loja de tecnologia do Matheus.
 ## A definir (perguntar ao Matheus antes de usar)
 - Preços (exibir ou não no site?)
 - Contato: endereço, redes sociais
-- Identidade visual: cores, fontes (o Matheus já tem logomarca)
 - Domínio (ex.: manaustecnologias.com.br)
 
-## Estado atual: v0.1 (publicada)
-- `index.html` com nome, serviços, eletrônicos, contato e rodapé. Sem CSS ainda.
-- Git configurado e site publicado no GitHub Pages (v0.5 adiantada).
+## Identidade visual (definida na v0.2)
+- Logo: `img/logo.png` (250x248, fundo branco), cérebro colorido em polígonos.
+- Tema "clean e tecnológico". Paleta em variáveis no `:root` do `style.css`:
+  azul-marinho #14213D (texto), azul #1E6FD9 (principal), ciano #22B8E6,
+  laranja #F7931E (chamada para ação), fundos #FFFFFF / #F5F8FC, texto suave #5B6B82.
+- Fontes (Google Fonts): Montserrat (títulos) e Inter (textos).
+
+## Estado atual: v0.2 (publicada)
+- `index.html`: logo no `<h1>`, seções Serviços, Eletrônicos e Contato (`id="contato"`), rodapé.
+- `style.css`: variáveis, faixa em degradê no topo, seções alternadas (`nth-child(odd)`),
+  cartões em grid responsivo (`.cartoes`; `.produtos` com borda laranja), rodapé azul-marinho.
+- Já aprendido: tags básicas, img/alt, link de CSS, variáveis, box model, seletores
+  (classe, id, `>`, `:hover`, `nth-child`), grid `auto-fit/minmax`, especificidade/cascata,
+  ciclo git add → commit → push.
 
 ## Roadmap
 1. ✅ v0.1: página inicial simples (`index.html`) com nome da loja e contato
-2. v0.2: estilo com CSS (logo, cores, fontes, layout que funcione no celular)
+2. ✅ v0.2: estilo com CSS (logo, cores, fontes, layout que funcione no celular)
 3. v0.3: seções de Serviços de T.I. e Eletrônicos
 4. v0.4: botão de WhatsApp e mapa/endereço
 5. ✅ v0.5: publicar no GitHub Pages
