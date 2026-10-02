@@ -1,0 +1,7 @@
+Pasta das imagens do portfólio de cardápios digitais.
+
+- Uma imagem por projeto (ex.: captura do cardápio aberto no celular, num mockup).
+- Tamanho ideal: 1200 x 900 px (formato 4:3). Outros tamanhos funcionam, mas são recortados.
+- Formato: .jpg ou .webp, de preferência com menos de 300 KB.
+- Nome em minúsculas, sem espaços e sem acentos: restaurante-sabor-do-norte.jpg
+- O modelo de HTML para adicionar o projeto está comentado na seção "cardapios" do index.html.

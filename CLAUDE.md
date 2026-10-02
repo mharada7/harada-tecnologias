@@ -67,7 +67,11 @@ Slogan: "Conectando a Amazônia ao Futuro".
 3. v0.3: seções de Serviços de T.I. e Eletrônicos (melhorar com descrições/ícones)
 4. v0.4: ✅ botão de WhatsApp · ✅ identidade Harada · ⬜ mapa/endereço
 5. ✅ v0.5: publicar no GitHub Pages
-6. v0.6: seção **Cardápios Digitais** com espaço de portfólio (imagens + links)
+6. ✅ v0.6: seção **Cardápios Digitais** (`id="cardapios"`): intro, 3 benefícios, portfólio
+   (`.portfolio` / `.projeto`, cartão "Em breve" 準備中, modelo comentado no HTML,
+   imagens em `img/portfolio/` 1200x900) e botão de WhatsApp próprio.
+   Próximo projeto do Matheus (em outra conversa): o próprio cardápio digital com
+   carrinho em JavaScript e pedido via link `wa.me` montado na hora.
 7. Futuro: catálogo de produtos, formulário de orçamento, domínio próprio, SEO
 
 ## Como o Claude deve trabalhar comigo

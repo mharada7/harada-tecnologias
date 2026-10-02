@@ -218,10 +218,98 @@ section h2::after {
     border-top-color: var(--aka);
 }
 
-/* ===== Contato ===== */
+/* ===== Cardápios Digitais ===== */
+#cardapios,
 #contato {
     text-align: center;
 }
+
+.intro {
+    max-width: 640px;
+    margin-bottom: 32px;
+    color: var(--texto-suave);
+}
+
+#cardapios h3 {
+    margin-top: 48px;
+    margin-bottom: 24px;
+    font-family: var(--fonte-titulo);
+}
+
+/* portfólio: cartões de até 300px, centralizados */
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 300px));
+    justify-content: center;
+    gap: 24px;
+}
+
+.projeto {
+    background-color: var(--branco);
+    border: 1px solid var(--linha);
+    border-radius: 8px;
+    overflow: hidden;   /* a imagem respeita os cantos arredondados */
+    box-shadow: 0 4px 12px rgba(20, 27, 43, 0.05);
+}
+
+/* imagem (ou espaço vazio) sempre no formato 4:3, sem distorcer */
+.projeto img,
+.projeto-vazio {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.projeto-info {
+    padding: 16px 20px 24px;
+}
+
+.projeto-info h4 {
+    margin: 0 0 8px;
+    font-family: var(--fonte-titulo);
+}
+
+.projeto-info p {
+    margin: 0 0 12px;
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+}
+
+.projeto-info a {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* cartão "Em breve": borda tracejada e 準備中 (em preparação) na vertical */
+.em-breve {
+    background-color: transparent;
+    border-style: dashed;
+    box-shadow: none;
+}
+
+.projeto-vazio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px dashed var(--linha);
+}
+
+.projeto-vazio span {
+    writing-mode: vertical-rl;   /* 準備中 na vertical */
+    font-family: var(--fonte-jp);
+    font-weight: 600;
+    font-size: 2rem;
+    letter-spacing: 0.3em;
+    color: var(--linha);
+}
+
+.acao {
+    margin-top: 40px;
+}
+
+/* ===== Contato ===== */
 
 /* ===== Botão de chamada para ação ===== */
 .botao {
