@@ -8,11 +8,11 @@ Slogan: "Conectando a Amazônia ao Futuro".
   - Formatação de computadores
   - Serviço de backup
   - Instalação do pacote Office
-- **Venda de eletrônicos:**
-  - Cabos para celulares em geral
-  - Carregadores
-  - Películas de vidro
-  - Fones de ouvido
+- **Celulares:** troca de frontal e suporte (configuração, transferência de dados).
+- **Desenvolvimento:** cardápios digitais; Backup Checker em desenvolvimento ("Em breve").
+- **Venda de eletrônicos** (cabos, carregadores, películas, fones): NÃO aparecem mais no
+  site; ficam no catálogo do WhatsApp Business (`https://wa.me/c/5592992282487`) e no
+  Instagram **@haradatecnologias** (`https://www.instagram.com/haradatecnologias/`).
 - Objetivo do site: apresentar a loja, mostrar serviços e produtos e fazer o
   cliente entrar em contato.
 
@@ -58,7 +58,7 @@ Slogan: "Conectando a Amazônia ao Futuro".
 - Detalhes: carimbo hanko 原田 (`writing-mode: vertical-rl`), cantoneiras (`::before/::after`),
   linhas vermelhas no slogan e tracinho vermelho sob os `h2`.
 
-## Estado atual: v0.4 (identidade Harada + botão de WhatsApp)
+## Estado da v0.4 (identidade Harada + botão de WhatsApp); o atual está no Roadmap (v0.9)
 - `index.html`: cabeçalho com hanko, cérebro e nome; seções Serviços, Eletrônicos e
   Contato (`id="contato"`, botão `.botao` de WhatsApp); rodapé.
 - `style.css`: variáveis, cabeçalho japonês, seções alternadas (`nth-child(odd)`), cartões em
@@ -105,7 +105,24 @@ Slogan: "Conectando a Amazônia ao Futuro".
    `.projeto-destaque` (880px, imagem | texto lado a lado a partir de 768px, botão
    `.botao-secundario` "Testar o cardápio →"); outros projetos entram em `.portfolio`
    abaixo (modelo comentado lá). Cuidado: `.destaque` é a classe do "Futuro" no slogan.
-9. Futuro: catálogo de produtos, formulário de orçamento, domínio próprio, menu de navegação
+9. ✅ v0.9: site dividido em 3 páginas, com menu `.topo` (marca + `.menu`, link da página
+   atual com `aria-current="page"`) e rodapé `footer#contato` repetidos em cada página
+   (sem framework: ao mudar menu/rodapé, mudar nos 3 arquivos). Fundos alternados agora por
+   classe `.fundo-escuro` (não mais `nth-child`); `.centro` centraliza o texto.
+   - `index.html`: `.hero` (cérebro + nome + hanko), seção "Serviços" com 4 "portas"
+     em grade 2x2 (`.portas`/`.porta`): Computadores, Celulares, Sistemas de PDV (links para
+     `assistencia.html#computadores|#celulares|#pdv`) e Desenvolvimento. Cada porta: ícone,
+     h3, frase curta, `.checklist` (✓; item `.breve` com ◌) e `.porta-link` alinhado no
+     fundo (flex column + `margin-top: auto`). Depois, faixa de acessórios com botões para
+     o catálogo do WhatsApp e Instagram.
+   - `assistencia.html` (修理): Computadores, Celulares (`.cartoes-2`), Sistemas de PDV
+     (botão próprio), Peça um orçamento (mesma ordem das portas do Início).
+   - `desenvolvimento.html` (開発): `.abas` (atalhos), Cardápios Digitais + portfólio,
+     seção `#em-breve` com cartão Backup Checker (`.em-breve` + `.etiqueta`).
+   - Páginas internas usam `.titulo-pagina` (h1 + kanji `.titulo-jp`). No celular o menu
+     mostra só "Assistência" (`.some-celular`) para caber em uma linha a 360px.
+   - Fotos de `img/produtos/` removidas.
+10. Futuro: formulário de orçamento, domínio próprio, página própria do Backup Checker
 
 ## Como o Claude deve trabalhar comigo
 A metodologia está nas preferências globais (`~/.claude/CLAUDE.md`): iniciante,

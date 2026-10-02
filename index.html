@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harada Tecnologias | Serviços de T.I. e acessórios em Manaus</title>
-    <meta name="description" content="Serviços de T.I., suporte a sistemas de PDV, acessórios para celular e cardápios digitais em Manaus - AM. Fale com a gente pelo WhatsApp.">
+    <title>Harada Tecnologias | Assistência técnica e desenvolvimento em Manaus</title>
+    <meta name="description" content="Assistência técnica de computadores e celulares, suporte a sistemas de PDV e cardápios digitais em Manaus - AM. Fale com a gente pelo WhatsApp.">
 
     <!-- ícone da aba e da tela inicial do celular -->
     <link rel="icon" type="image/png" href="img/icone.png">
@@ -15,7 +15,7 @@
     <meta property="og:locale" content="pt_BR">
     <meta property="og:site_name" content="Harada Tecnologias">
     <meta property="og:title" content="Harada Tecnologias">
-    <meta property="og:description" content="Serviços de T.I., suporte a sistemas de PDV, acessórios para celular e cardápios digitais em Manaus - AM.">
+    <meta property="og:description" content="Assistência técnica de computadores e celulares, suporte a sistemas de PDV e cardápios digitais em Manaus - AM.">
     <meta property="og:url" content="https://mharada7.github.io/harada-tecnologias/">
     <meta property="og:image" content="https://mharada7.github.io/harada-tecnologias/img/previa.png">
     <meta property="og:image:width" content="1200">
@@ -25,159 +25,139 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
-    <!-- fonte japonesa: baixa só os caracteres de 原田テクノロジー準備中 -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600&text=%E5%8E%9F%E7%94%B0%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E6%BA%96%E5%82%99%E4%B8%AD&display=swap" rel="stylesheet">
+    <!-- fonte japonesa: baixa só os caracteres de 原田テクノロジー準備中修理開発 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600&text=%E5%8E%9F%E7%94%B0%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E6%BA%96%E5%82%99%E4%B8%AD%E4%BF%AE%E7%90%86%E9%96%8B%E7%99%BA&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="hanko" lang="ja" aria-hidden="true">原田</div>
-
-        <img class="cerebro" src="img/cerebro.png" alt="" width="760" height="630">
-        <div class="marca-texto">
-            <h1 class="marca">
-                <span class="marca-nome">Harada</span>
-                <span class="marca-sub">Tecnologias</span>
-            </h1>
-            <p class="marca-jp" lang="ja">原田テクノロジー</p>
-            <p class="slogan">Conectando a Amazônia ao <span class="destaque">Futuro</span></p>
-        </div>
+    <!-- TOPO (igual em todas as páginas; só muda o aria-current do link da página atual) -->
+    <header class="topo">
+        <a class="topo-marca" href="index.html">
+            <img src="img/cerebro.png" alt="" width="760" height="630">
+            <span>Harada <span class="topo-sub">Tecnologias</span></span>
+        </a>
+        <nav class="menu" aria-label="Menu principal">
+            <ul>
+                <li><a href="index.html" aria-current="page">Início</a></li>
+                <li><a href="assistencia.html">Assistência<span class="some-celular"> técnica</span></a></li>
+                <li><a href="desenvolvimento.html">Desenvolvimento</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <section>
-            <h2>Serviços de T.I.</h2>
-            <ul class="cartoes servicos">
-                <li>
+        <div class="hero">
+            <div class="hanko" lang="ja" aria-hidden="true">原田</div>
+
+            <img class="cerebro" src="img/cerebro.png" alt="" width="760" height="630">
+            <div class="marca-texto">
+                <h1 class="marca">
+                    <span class="marca-nome">Harada</span>
+                    <span class="marca-sub">Tecnologias</span>
+                </h1>
+                <p class="marca-jp" lang="ja">原田テクノロジー</p>
+                <p class="slogan">Conectando a Amazônia ao <span class="destaque">Futuro</span></p>
+            </div>
+        </div>
+
+        <section class="fundo-escuro">
+            <h2>Serviços</h2>
+
+            <!-- as "portas" do site: cada cartão inteiro é um link para a seção certa -->
+            <div class="portas">
+                <a class="porta" href="assistencia.html#computadores">
+                    <!-- ícone: notebook -->
+                    <svg class="icone" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/>
+                    </svg>
+                    <h3>Computadores</h3>
+                    <p>Seu PC rápido de novo.</p>
+                    <ul class="checklist">
+                        <li>Formatação</li>
+                        <li>Backup</li>
+                        <li>Pacote Office</li>
+                    </ul>
+                    <span class="porta-link">Ver mais →</span>
+                </a>
+
+                <a class="porta" href="assistencia.html#celulares">
+                    <!-- ícone: celular -->
+                    <svg class="icone" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect width="14" height="20" x="5" y="2" rx="2" ry="2"/>
+                        <path d="M12 18h.01"/>
+                    </svg>
+                    <h3>Celulares</h3>
+                    <p>Tela nova e celular configurado.</p>
+                    <ul class="checklist">
+                        <li>Troca de frontal</li>
+                        <li>Transferência de dados</li>
+                        <li>Configuração e aplicativos</li>
+                    </ul>
+                    <span class="porta-link">Ver mais →</span>
+                </a>
+
+                <a class="porta" href="assistencia.html#pdv">
                     <!-- ícone: headset (suporte) -->
                     <svg class="icone" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/>
                         <path d="M21 16v2a4 4 0 0 1-4 4h-5"/>
                     </svg>
-                    <h3>Suporte a sistemas de PDV</h3>
-                    <p>Instalação, configuração e suporte de sistemas de PDV para bares, restaurantes e food service.</p>
-                </li>
-                <li>
-                    <!-- ícone: notebook -->
-                    <svg class="icone" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/>
-                    </svg>
-                    <h3>Formatação de computadores</h3>
-                    <p>Sistema limpo e rápido, com drivers e programas essenciais instalados.</p>
-                </li>
-                <li>
-                    <!-- ícone: nuvem com seta para cima -->
-                    <svg class="icone" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M12 13v8"/>
-                        <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/>
-                        <path d="m8 17 4-4 4 4"/>
-                    </svg>
-                    <h3>Serviço de backup</h3>
-                    <p>Seus arquivos, fotos e documentos guardados com segurança antes de qualquer serviço.</p>
-                </li>
-                <li>
-                    <!-- ícone: documento -->
-                    <svg class="icone" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/>
-                        <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
-                        <path d="M16 13H8"/>
-                        <path d="M16 17H8"/>
-                        <path d="M10 9H8"/>
-                    </svg>
-                    <h3>Instalação do pacote Office</h3>
-                    <p>Word, Excel e PowerPoint instalados e prontos para usar.</p>
-                </li>
-            </ul>
-        </section>
-
-        <section id="cardapios">
-            <h2>Cardápios Digitais</h2>
-            <p class="intro">
-                Seu restaurante, lanchonete ou açaiteria com um cardápio moderno, aberto no
-                celular do cliente por QR Code. Mudou um prato ou um preço? É só pedir que
-                atualizamos em minutos, sem reimprimir nada.
-            </p>
-
-            <ul class="cartoes">
-                <li>Acesso por QR Code</li>
-                <li>Atualização rápida</li>
-                <li>Pedido direto no WhatsApp</li>
-            </ul>
-
-            <h3>Portfólio</h3>
-
-            <!-- PROJETO EM DESTAQUE (carro-chefe): bloco largo, imagem ao lado do texto no computador -->
-            <article class="projeto projeto-destaque">
-                <img src="img/portfolio/cafe-aconchego.jpg" alt="Cardápio digital do Café Aconchego aberto no celular, mostrando a mesa 07, a busca, as categorias e um cappuccino" width="1200" height="900" loading="lazy">
-                <div class="projeto-info">
-                    <h4>Café Aconchego (demonstração)</h4>
-                    <p>Cardápio aberto pelo QR Code da mesa, com busca, categorias e pedido opcional pelo WhatsApp.</p>
-                    <a class="botao-secundario" href="https://mharada7.github.io/cardapio-digital/?mesa=7" target="_blank" rel="noopener">Testar o cardápio →</a>
-                </div>
-            </article>
-
-            <div class="portfolio">
-                <!--
-                    OUTROS PROJETOS: entram aqui, como cartões menores abaixo do destaque.
-                    Copie o bloco abaixo, tire os sinais de comentário e troque a imagem,
-                    o texto e o link.
-                    Imagem: salve em img/portfolio/ (nome em minúsculas, sem espaços),
-                    de preferência 1200x900 px (formato 4:3), em .jpg ou .webp.
-
-                <article class="projeto">
-                    <img src="img/portfolio/nome-do-projeto.jpg" alt="Cardápio digital do Restaurante X aberto no celular" width="1200" height="900" loading="lazy">
-                    <div class="projeto-info">
-                        <h4>Restaurante X</h4>
-                        <p>Cardápio com pedido pelo WhatsApp.</p>
-                        <a href="https://link-do-cardapio" target="_blank" rel="noopener">Ver cardápio →</a>
-                    </div>
-                </article>
-                -->
-            </div>
-
-            <p class="acao">
-                <a class="botao" href="https://wa.me/5592992282487?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20card%C3%A1pio%20digital%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">
-                    Quero um cardápio digital
+                    <h3>Sistemas de PDV</h3>
+                    <p>Seu caixa sem parar.</p>
+                    <ul class="checklist">
+                        <li>Instalação</li>
+                        <li>Configuração</li>
+                        <li>Suporte</li>
+                    </ul>
+                    <span class="porta-link">Ver mais →</span>
                 </a>
+
+                <a class="porta" href="desenvolvimento.html">
+                    <!-- ícone: código < > -->
+                    <svg class="icone" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="m16 18 6-6-6-6"/>
+                        <path d="m8 6-6 6 6 6"/>
+                    </svg>
+                    <h3>Desenvolvimento</h3>
+                    <p>Tecnologia sob medida.</p>
+                    <ul class="checklist">
+                        <li>Cardápio digital</li>
+                        <li>Pedido pelo WhatsApp</li>
+                        <li class="breve">Backup Checker (em breve)</li>
+                    </ul>
+                    <span class="porta-link">Ver projetos →</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="acessorios" class="centro">
+            <h2>Acessórios para celular</h2>
+            <p class="intro">
+                Cabos, carregadores, películas de vidro e fones de ouvido.
+                Veja os modelos disponíveis no nosso catálogo, atualizado sempre que chegam novidades.
             </p>
-        </section>
-
-        <section>
-            <h2>Acessórios para Celular</h2>
-            <ul class="cartoes produtos">
-                <li>
-                    <img class="foto-produto" src="img/produtos/cabos.jpg" alt="Cabos com pontas USB-C, Lightning e Micro-USB" width="447" height="447" loading="lazy">
-                    <h3>Cabos para celulares</h3>
-                </li>
-                <li>
-                    <img class="foto-produto" src="img/produtos/carregadores.jpg" alt="Carregador de parede com cabo USB" width="447" height="447" loading="lazy">
-                    <h3>Carregadores</h3>
-                </li>
-                <li>
-                    <img class="foto-produto" src="img/produtos/peliculas.jpg" alt="Películas de vidro para celular, incluindo modelos 3D e de privacidade" width="447" height="447" loading="lazy">
-                    <h3>Películas de vidro</h3>
-                </li>
-                <li>
-                    <img class="foto-produto" src="img/produtos/fones.jpg" alt="Fone de ouvido Bluetooth com estojo de carregamento" width="448" height="446" loading="lazy">
-                    <h3>Fones de ouvido</h3>
-                </li>
-            </ul>
-        </section>
-
-        <section id="contato">
-            <h2>Contato</h2>
-            <a class="botao" href="https://wa.me/5592992282487?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener">
-                Chamar no WhatsApp
-            </a>
-            <p class="contato-numero">WhatsApp: (92) 99228-2487</p>
-
-            <p>E-mail: <a href="mailto:matheus.haradati@gmail.com">matheus.haradati@gmail.com</a></p>
-            <p>Loja online · Manaus - AM</p>
+            <p class="botoes">
+                <a class="botao" href="https://wa.me/c/5592992282487" target="_blank" rel="noopener">Ver catálogo no WhatsApp</a>
+                <a class="botao-secundario" href="https://www.instagram.com/haradatecnologias/" target="_blank" rel="noopener">Seguir no Instagram</a>
+            </p>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Harada Tecnologias</p>
+    <!-- RODAPÉ COM CONTATO (igual em todas as páginas; o menu "Contato" leva para cá) -->
+    <footer id="contato">
+        <h2>Contato</h2>
+        <a class="botao" href="https://wa.me/5592992282487?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener">
+            Chamar no WhatsApp
+        </a>
+        <p class="contato-numero">WhatsApp: (92) 99228-2487</p>
+        <ul class="contato-lista">
+            <li>E-mail: <a href="mailto:matheus.haradati@gmail.com">matheus.haradati@gmail.com</a></li>
+            <li>Instagram: <a href="https://www.instagram.com/haradatecnologias/" target="_blank" rel="noopener">@haradatecnologias</a></li>
+            <li>Acessórios: <a href="https://wa.me/c/5592992282487" target="_blank" rel="noopener">catálogo no WhatsApp</a></li>
+            <li>Loja online · Manaus - AM</li>
+        </ul>
+        <p class="copyright">&copy; 2026 Harada Tecnologias</p>
     </footer>
 </body>
 </html>
