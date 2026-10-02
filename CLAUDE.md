@@ -116,12 +116,17 @@ Slogan: "Conectando a Amazônia ao Futuro".
      fundo (flex column + `margin-top: auto`). Depois, faixa de acessórios com botões para
      o catálogo do WhatsApp e Instagram.
    - `assistencia.html` (修理): Computadores, Celulares (`.cartoes-2`), Sistemas de PDV
-     (botão próprio), Peça um orçamento (mesma ordem das portas do Início).
+     (mesma ordem das portas do Início). Cada seção termina com o seu botão de WhatsApp
+     (`p.acao`, mensagem com o assunto: computador / celular / PDV); não há mais a seção
+     "Peça um orçamento".
    - `desenvolvimento.html` (開発): `.abas` (atalhos), Cardápios Digitais + portfólio,
      seção `#em-breve` com cartão Backup Checker (`.em-breve` + `.etiqueta`).
    - Páginas internas usam `.titulo-pagina` (h1 + kanji `.titulo-jp`). No celular o menu
      mostra só "Assistência" (`.some-celular`) para caber em uma linha a 360px.
    - Fotos de `img/produtos/` removidas.
+   - Cache: o CSS é carregado como `style.css?v=0.10` nas 3 páginas. Ao mudar o `style.css`,
+     subir o número nas 3 (senão o celular mistura CSS antigo com HTML novo e "distorce").
+   - Menu testado em 320px (`@media (max-width: 360px)` diminui nome e links).
 10. Futuro: formulário de orçamento, domínio próprio, página própria do Backup Checker
 
 ## Como o Claude deve trabalhar comigo
