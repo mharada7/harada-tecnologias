@@ -99,7 +99,13 @@ Slogan: "Conectando a Amazônia ao Futuro".
    (180x180: o CÉREBRO, marca registrada, sobre fundo washi arredondado; o Matheus
    preferiu o cérebro ao carimbo 原田). `og:image` precisa de URL absoluta.
    WhatsApp guarda a prévia em cache: testar com `?v=2` no fim do link.
-8. Futuro: catálogo de produtos, formulário de orçamento, domínio próprio, menu de navegação
+8. ✅ v0.8: cabeçalho compacto (cérebro ao lado do nome a partir de 960px, `.marca-texto`;
+   cérebro 240px no celular). Portfólio como carro-chefe: ordem das seções agora
+   Serviços → **Cardápios Digitais** → Acessórios → Contato. Café Aconchego em
+   `.projeto-destaque` (880px, imagem | texto lado a lado a partir de 768px, botão
+   `.botao-secundario` "Testar o cardápio →"); outros projetos entram em `.portfolio`
+   abaixo (modelo comentado lá). Cuidado: `.destaque` é a classe do "Futuro" no slogan.
+9. Futuro: catálogo de produtos, formulário de orçamento, domínio próprio, menu de navegação
 
 ## Como o Claude deve trabalhar comigo
 A metodologia está nas preferências globais (`~/.claude/CLAUDE.md`): iniciante,

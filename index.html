@@ -34,12 +34,14 @@
         <div class="hanko" lang="ja" aria-hidden="true">原田</div>
 
         <img class="cerebro" src="img/cerebro.png" alt="" width="760" height="630">
-        <h1 class="marca">
-            <span class="marca-nome">Harada</span>
-            <span class="marca-sub">Tecnologias</span>
-        </h1>
-        <p class="marca-jp" lang="ja">原田テクノロジー</p>
-        <p class="slogan">Conectando a Amazônia ao <span class="destaque">Futuro</span></p>
+        <div class="marca-texto">
+            <h1 class="marca">
+                <span class="marca-nome">Harada</span>
+                <span class="marca-sub">Tecnologias</span>
+            </h1>
+            <p class="marca-jp" lang="ja">原田テクノロジー</p>
+            <p class="slogan">Conectando a Amazônia ao <span class="destaque">Futuro</span></p>
+        </div>
     </header>
 
     <main>
@@ -88,6 +90,58 @@
             </ul>
         </section>
 
+        <section id="cardapios">
+            <h2>Cardápios Digitais</h2>
+            <p class="intro">
+                Seu restaurante, lanchonete ou açaiteria com um cardápio moderno, aberto no
+                celular do cliente por QR Code. Mudou um prato ou um preço? É só pedir que
+                atualizamos em minutos, sem reimprimir nada.
+            </p>
+
+            <ul class="cartoes">
+                <li>Acesso por QR Code</li>
+                <li>Atualização rápida</li>
+                <li>Pedido direto no WhatsApp</li>
+            </ul>
+
+            <h3>Portfólio</h3>
+
+            <!-- PROJETO EM DESTAQUE (carro-chefe): bloco largo, imagem ao lado do texto no computador -->
+            <article class="projeto projeto-destaque">
+                <img src="img/portfolio/cafe-aconchego.jpg" alt="Cardápio digital do Café Aconchego aberto no celular, mostrando a mesa 07, a busca, as categorias e um cappuccino" width="1200" height="900" loading="lazy">
+                <div class="projeto-info">
+                    <h4>Café Aconchego (demonstração)</h4>
+                    <p>Cardápio aberto pelo QR Code da mesa, com busca, categorias e pedido opcional pelo WhatsApp.</p>
+                    <a class="botao-secundario" href="https://mharada7.github.io/cardapio-digital/?mesa=7" target="_blank" rel="noopener">Testar o cardápio →</a>
+                </div>
+            </article>
+
+            <div class="portfolio">
+                <!--
+                    OUTROS PROJETOS: entram aqui, como cartões menores abaixo do destaque.
+                    Copie o bloco abaixo, tire os sinais de comentário e troque a imagem,
+                    o texto e o link.
+                    Imagem: salve em img/portfolio/ (nome em minúsculas, sem espaços),
+                    de preferência 1200x900 px (formato 4:3), em .jpg ou .webp.
+
+                <article class="projeto">
+                    <img src="img/portfolio/nome-do-projeto.jpg" alt="Cardápio digital do Restaurante X aberto no celular" width="1200" height="900" loading="lazy">
+                    <div class="projeto-info">
+                        <h4>Restaurante X</h4>
+                        <p>Cardápio com pedido pelo WhatsApp.</p>
+                        <a href="https://link-do-cardapio" target="_blank" rel="noopener">Ver cardápio →</a>
+                    </div>
+                </article>
+                -->
+            </div>
+
+            <p class="acao">
+                <a class="botao" href="https://wa.me/5592992282487?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20card%C3%A1pio%20digital%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">
+                    Quero um cardápio digital
+                </a>
+            </p>
+        </section>
+
         <section>
             <h2>Acessórios para Celular</h2>
             <ul class="cartoes produtos">
@@ -108,55 +162,6 @@
                     <h3>Fones de ouvido</h3>
                 </li>
             </ul>
-        </section>
-
-        <section id="cardapios">
-            <h2>Cardápios Digitais</h2>
-            <p class="intro">
-                Seu restaurante, lanchonete ou açaiteria com um cardápio moderno, aberto no
-                celular do cliente por QR Code. Mudou um prato ou um preço? É só pedir que
-                atualizamos em minutos, sem reimprimir nada.
-            </p>
-
-            <ul class="cartoes">
-                <li>Acesso por QR Code</li>
-                <li>Atualização rápida</li>
-                <li>Pedido direto no WhatsApp</li>
-            </ul>
-
-            <h3>Portfólio</h3>
-            <div class="portfolio">
-                <!--
-                    MODELO DE PROJETO: para adicionar um trabalho, copie o bloco abaixo,
-                    tire os sinais de comentário e troque a imagem, o texto e o link.
-                    Imagem: salve em img/portfolio/ (nome em minúsculas, sem espaços),
-                    de preferência 1200x900 px (formato 4:3), em .jpg ou .webp.
-
-                <article class="projeto">
-                    <img src="img/portfolio/nome-do-projeto.jpg" alt="Cardápio digital do Restaurante X aberto no celular" width="1200" height="900" loading="lazy">
-                    <div class="projeto-info">
-                        <h4>Restaurante X</h4>
-                        <p>Cardápio com pedido pelo WhatsApp.</p>
-                        <a href="https://link-do-cardapio" target="_blank" rel="noopener">Ver cardápio →</a>
-                    </div>
-                </article>
-                -->
-
-                <article class="projeto">
-                    <img src="img/portfolio/cafe-aconchego.jpg" alt="Cardápio digital do Café Aconchego aberto no celular, mostrando a mesa 07, a busca, as categorias e um cappuccino" width="1200" height="900" loading="lazy">
-                    <div class="projeto-info">
-                        <h4>Café Aconchego (demonstração)</h4>
-                        <p>Cardápio aberto pelo QR Code da mesa, com busca, categorias e pedido opcional pelo WhatsApp.</p>
-                        <a href="https://mharada7.github.io/cardapio-digital/?mesa=7" target="_blank" rel="noopener">Ver cardápio →</a>
-                    </div>
-                </article>
-            </div>
-
-            <p class="acao">
-                <a class="botao" href="https://wa.me/5592992282487?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20card%C3%A1pio%20digital%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">
-                    Quero um cardápio digital
-                </a>
-            </p>
         </section>
 
         <section id="contato">

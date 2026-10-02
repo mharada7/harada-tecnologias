@@ -82,7 +82,7 @@ header::after {
 .cerebro {
     display: block;
     width: 100%;
-    max-width: 340px;   /* nunca passa de 340px, e encolhe no celular */
+    max-width: 240px;   /* nunca passa de 240px, e encolhe no celular */
     height: auto;       /* mantém a proporção */
     margin: 0 auto;
 }
@@ -151,6 +151,28 @@ header::after {
     .slogan::after {
         width: 20px;
         margin: 0 8px;
+    }
+}
+
+/* em telas largas (computador): cérebro ao lado do nome, como na prévia do WhatsApp.
+   Abaixo de 960px não cabe (cérebro + espaço + "HARADA" ≈ 860px), então fica empilhado. */
+@media (min-width: 960px) {
+    header {
+        display: flex;              /* filhos lado a lado */
+        align-items: center;        /* centralizados na vertical */
+        justify-content: center;    /* e na horizontal */
+        gap: 56px;                  /* espaço entre o cérebro e os textos */
+        padding: 64px 32px;
+    }
+
+    .cerebro {
+        width: 320px;
+        max-width: 320px;
+        margin: 0;
+    }
+
+    .marca {
+        margin-top: 0;
     }
 }
 
@@ -300,12 +322,13 @@ section h2::after {
     font-family: var(--fonte-titulo);
 }
 
-/* portfólio: cartões de até 300px, centralizados */
+/* outros projetos do portfólio (abaixo do destaque): cartões de até 300px, centralizados */
 .portfolio {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 300px));
     justify-content: center;
     gap: 24px;
+    margin-top: 24px;
 }
 
 .projeto {
@@ -344,6 +367,59 @@ section h2::after {
 .projeto-info a {
     font-weight: 600;
     text-decoration: none;
+}
+
+/* ===== Projeto em destaque (carro-chefe do portfólio) ===== */
+.projeto-destaque {
+    max-width: 880px;
+    margin: 0 auto;
+    border-top: 3px solid var(--aka);
+    box-shadow: 0 8px 24px rgba(20, 27, 43, 0.08);
+}
+
+.projeto-destaque .projeto-info {
+    padding: 24px;
+}
+
+.projeto-destaque h4 {
+    font-size: 1.4rem;
+}
+
+.projeto-destaque .projeto-info p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+/* no computador: imagem de um lado, textos do outro */
+@media (min-width: 768px) {
+    .projeto-destaque {
+        display: grid;
+        grid-template-columns: 1fr 1fr;   /* duas colunas iguais */
+        align-items: center;              /* textos centralizados na vertical */
+        text-align: left;
+    }
+
+    .projeto-destaque .projeto-info {
+        padding: 32px 40px;
+    }
+}
+
+/* botão "contornado": chama atenção sem competir com o botão vermelho principal */
+.botao-secundario {
+    display: inline-block;
+    padding: 10px 22px;
+    color: var(--ai);
+    font-family: var(--fonte-titulo);
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid var(--ai);
+    border-radius: 8px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.botao-secundario:hover {
+    background-color: var(--ai);
+    color: var(--branco);
 }
 
 /* cartão "Em breve": borda tracejada e 準備中 (em preparação) na vertical */
