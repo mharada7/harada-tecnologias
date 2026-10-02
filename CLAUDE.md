@@ -84,8 +84,11 @@ Slogan: "Conectando a Amazônia ao Futuro".
 6. ✅ v0.6: seção **Cardápios Digitais** (`id="cardapios"`): intro, 3 benefícios, portfólio
    (`.portfolio` / `.projeto`, cartão "Em breve" 準備中, modelo comentado no HTML,
    imagens em `img/portfolio/` 1200x900) e botão de WhatsApp próprio.
-   Próximo projeto do Matheus (em outra conversa): o próprio cardápio digital com
-   carrinho em JavaScript e pedido via link `wa.me` montado na hora.
+   **1º projeto no portfólio (substituiu o cartão "Em breve"):** Café Aconchego,
+   cardápio de demonstração (repositório `mharada7/cardapio-digital`, pasta
+   `C:\ManausTecnologias\cardapio-digital`). Link do cartão com `?mesa=7`, porque o
+   foco comercial é o cardápio aberto pelo QR Code da mesa. Imagem
+   `img/portfolio/cafe-aconchego.jpg` (1200x900: print do celular sobre foto de café).
    Promessas do site ajustadas ao que HTML/CSS/JS entregam: "Atualização rápida" (o
    Matheus atualiza a pedido do cliente, em minutos; possível plano de manutenção mensal).
    NÃO prometer que o dono edita sozinho, a menos que o cardápio passe a ler os dados
