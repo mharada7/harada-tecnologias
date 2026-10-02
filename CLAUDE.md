@@ -34,6 +34,14 @@ Slogan: "Conectando a Amazônia ao Futuro".
 - O endereço antigo (`manaus-tecnologias`) não funciona mais (404).
 - A pasta local continua `C:\ManausTecnologias\site` (não renomeada).
 
+## Serviço "Suporte a sistemas de PDV"
+- O Matheus trabalha no iComanda (software para bares e restaurantes) e presta suporte
+  como freelancer; a maioria dos clientes dele é desse setor.
+- Cartão em Serviços (1º lugar, ícone headset), texto GENÉRICO: "sistemas de PDV para
+  bares, restaurantes e food service". Por decisão do Matheus, o site NÃO cita o iComanda
+  (evita uso de marca e exposição pública de possível conflito com o empregador).
+- Público-alvo forte: food service (combina com a seção Cardápios Digitais).
+
 ## A definir (perguntar ao Matheus antes de usar)
 - Preços (exibir ou não no site?)
 - Contato: redes sociais; horário real de atendimento (se quiser exibir)
@@ -78,6 +86,10 @@ Slogan: "Conectando a Amazônia ao Futuro".
    imagens em `img/portfolio/` 1200x900) e botão de WhatsApp próprio.
    Próximo projeto do Matheus (em outra conversa): o próprio cardápio digital com
    carrinho em JavaScript e pedido via link `wa.me` montado na hora.
+   Promessas do site ajustadas ao que HTML/CSS/JS entregam: "Atualização rápida" (o
+   Matheus atualiza a pedido do cliente, em minutos; possível plano de manutenção mensal).
+   NÃO prometer que o dono edita sozinho, a menos que o cardápio passe a ler os dados
+   de uma planilha Google Sheets (ideia para a v2 do cardápio).
 7. Futuro: catálogo de produtos, formulário de orçamento, domínio próprio, SEO
 
 ## Como o Claude deve trabalhar comigo
