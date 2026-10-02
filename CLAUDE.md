@@ -65,7 +65,12 @@ Slogan: "Conectando a Amazônia ao Futuro".
 ## Roadmap
 1. ✅ v0.1: página inicial simples (`index.html`) com nome da loja e contato
 2. ✅ v0.2: estilo com CSS (logo, cores, fontes, layout que funcione no celular)
-3. v0.3: seções de Serviços de T.I. e Eletrônicos (melhorar com descrições/ícones)
+3. ✅ v0.3: Serviços com ícones SVG inline (estilo Lucide, `.icone`) + título `h3` e descrição;
+   seção "Eletrônicos" renomeada para "Acessórios para celular" (palavras que o cliente busca);
+   cartões com foto (`.foto-produto`, 4:3, `object-fit: contain`) + título, sem etiquetas
+   (o Matheus preferiu sem, mais clean). Fotos em `img/produtos/` (cabos, carregadores,
+   peliculas, fones .jpg, ~447px, genéricas da internet por escolha do Matheus; trocar por
+   fotos próprias/maiores quando possível).
 4. ✅ v0.4: botão de WhatsApp · identidade Harada · "Loja online · Manaus - AM" (sem mapa)
 5. ✅ v0.5: publicar no GitHub Pages
 6. ✅ v0.6: seção **Cardápios Digitais** (`id="cardapios"`): intro, 3 benefícios, portfólio

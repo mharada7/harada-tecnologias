@@ -196,7 +196,8 @@ section h2::after {
     gap: 16px;
 }
 
-.cartoes li {
+/* ">" = só os filhos diretos (os cartões), não as etiquetas lá dentro */
+.cartoes > li {
     background-color: var(--branco);
     border: 1px solid var(--linha);
     border-top: 3px solid var(--ai);
@@ -208,14 +209,55 @@ section h2::after {
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.cartoes li:hover {
+.cartoes > li:hover {
     transform: translateY(-4px);   /* o cartão "sobe" um pouquinho */
     box-shadow: 0 8px 20px rgba(20, 27, 43, 0.10);
 }
 
+/* cartões de serviços: ícone + título + descrição */
+.icone {
+    display: block;
+    box-sizing: content-box;   /* o padding fica em volta dos 32px do ícone */
+    margin: 0 auto 16px;
+    padding: 14px;
+    color: var(--ai);          /* o ícone usa esta cor (stroke="currentColor") */
+    background-color: var(--washi);
+    border-radius: 50%;        /* fundo redondo */
+}
+
+.cartoes h3 {
+    margin: 0 0 8px;
+    font-family: var(--fonte-titulo);
+    font-size: 1rem;
+}
+
+.cartoes p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+}
+
 /* cartões de produtos com a tampa vermelha */
-.produtos li {
+.produtos > li {
     border-top-color: var(--aka);
+}
+
+/* foto do produto ocupando a largura toda do cartão */
+.produtos > li {
+    overflow: hidden;   /* a foto respeita os cantos arredondados */
+}
+
+.foto-produto {
+    display: block;
+    width: calc(100% + 32px);    /* 100% + o padding das laterais (16px + 16px) */
+    max-width: none;
+    height: auto;
+    margin: -24px -16px 16px;    /* "anula" o padding do cartão: a foto encosta nas bordas */
+    aspect-ratio: 4 / 3;
+    object-fit: contain;         /* mostra o produto inteiro, sem cortar */
+    background-color: var(--branco);
+    border-bottom: 1px solid var(--linha);
 }
 
 /* ===== Cardápios Digitais ===== */
