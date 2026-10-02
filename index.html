@@ -28,7 +28,7 @@
     <!-- fonte japonesa: baixa só os caracteres de 原田テクノロジー準備中支援開発 -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600&text=%E5%8E%9F%E7%94%B0%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E6%BA%96%E5%82%99%E4%B8%AD%E6%94%AF%E6%8F%B4%E9%96%8B%E7%99%BA&display=swap" rel="stylesheet">
     <!-- ?v=... obriga o navegador a baixar o CSS novo: mude o número sempre que alterar o style.css -->
-    <link rel="stylesheet" href="style.css?v=0.12">
+    <link rel="stylesheet" href="style.css?v=0.13">
 </head>
 <body>
     <!-- TOPO (igual em todas as páginas; só muda o aria-current do link da página atual) -->
@@ -40,7 +40,9 @@
         <nav class="menu" aria-label="Menu principal">
             <ul>
                 <li><a href="index.html" aria-current="page">Início</a></li>
-                <li><a href="suporte.html">Suporte<span class="some-celular"> técnico</span></a></li>
+                <li><a href="computadores.html">Computadores</a></li>
+                <li><a href="celulares.html">Celulares</a></li>
+                <li><a href="pdv.html">PDV</a></li>
                 <li><a href="desenvolvimento.html">Desenvolvimento</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
@@ -73,7 +75,7 @@
 
             <!-- as "portas" do site: cada cartão inteiro é um link para a seção certa -->
             <div class="portas">
-                <a class="porta" href="suporte.html#computadores">
+                <a class="porta" href="computadores.html">
                     <!-- ícone: notebook -->
                     <svg class="icone" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/>
@@ -88,7 +90,7 @@
                     <span class="porta-link">Ver mais →</span>
                 </a>
 
-                <a class="porta" href="suporte.html#celulares">
+                <a class="porta" href="celulares.html">
                     <!-- ícone: celular -->
                     <svg class="icone" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <rect width="14" height="20" x="5" y="2" rx="2" ry="2"/>
@@ -104,7 +106,7 @@
                     <span class="porta-link">Ver mais →</span>
                 </a>
 
-                <a class="porta" href="suporte.html#pdv">
+                <a class="porta" href="pdv.html">
                     <!-- ícone: headset (suporte) -->
                     <svg class="icone" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/>

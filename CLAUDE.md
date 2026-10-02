@@ -131,11 +131,22 @@ Slogan: "Conectando a Amazônia ao Futuro".
    - Páginas internas usam `.titulo-pagina` (h1 + kanji `.titulo-jp`). No celular o menu
      mostra só "Suporte" (`.some-celular`) para caber em uma linha a 360px.
    - Fotos de `img/produtos/` removidas.
-   - Cache: o CSS é carregado como `style.css?v=0.12` nas 3 páginas. Ao mudar o `style.css`,
+   - Cache: o CSS é carregado como `style.css?v=0.13` nas 3 páginas. Ao mudar o `style.css`,
      subir o número nas 3 (senão o celular mistura CSS antigo com HTML novo e "distorce").
    - Menu testado em 320px (`@media (max-width: 360px)` diminui nome e links). Há um 2º
      bloco 360px (slogan) DEPOIS do de 480px, porque a regra mais abaixo vence.
-10. Futuro: formulário de orçamento, domínio próprio, página própria do Backup Checker
+10. ✅ v0.10: **uma página por serviço** (substitui a `suporte.html` única):
+    - `computadores.html`, `celulares.html`, `pdv.html` (kanji 支援) e `desenvolvimento.html` (開発).
+      Estrutura: `.titulo-pagina` → seção "O que fazemos" (`.fundo-escuro`, cartões + botão de
+      WhatsApp com mensagem do assunto) → [só PDV: "Cardápio digital também", link para
+      `desenvolvimento.html#cardapios`] → "Outros serviços" (`nav.abas` com as outras páginas).
+    - Menu (6 links): Início · Computadores · Celulares · PDV · Desenvolvimento · Contato.
+      Abaixo de 900px a marca fica em cima e o menu embaixo; no celular o menu ocupa 2 linhas.
+    - As portas do Início levam direto para cada página.
+    - `suporte.html` e `assistencia.html` agora são só redirecionamentos (JS lê o `#hash`:
+      `#celulares` → `celulares.html` etc.; sem hash → `index.html#servicos`).
+    - CSS em `style.css?v=0.13`. A seção v0.9 acima descreve a estrutura anterior.
+11. Futuro: formulário de orçamento, domínio próprio, página própria do Backup Checker
 
 ## Como o Claude deve trabalhar comigo
 A metodologia está nas preferências globais (`~/.claude/CLAUDE.md`): iniciante,

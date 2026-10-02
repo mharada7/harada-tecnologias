@@ -2,12 +2,21 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <!-- esta página mudou de nome: leva quem tiver o link antigo para suporte.html -->
-    <meta http-equiv="refresh" content="0; url=suporte.html">
-    <link rel="canonical" href="https://mharada7.github.io/harada-tecnologias/suporte.html">
-    <title>Suporte técnico | Harada Tecnologias</title>
+    <title>Harada Tecnologias</title>
+    <!-- esta página foi dividida em computadores.html, celulares.html e pdv.html.
+         Quem tiver o link antigo é levado para a página certa. -->
+    <script>
+        var destinos = {
+            "#computadores": "computadores.html",
+            "#celulares": "celulares.html",
+            "#pdv": "pdv.html"
+        };
+        location.replace(destinos[location.hash] || "index.html#servicos");
+    </script>
+    <!-- se o JavaScript estiver desligado: vai para os serviços do Início -->
+    <meta http-equiv="refresh" content="0; url=index.html#servicos">
 </head>
 <body>
-    <p>Esta página mudou de endereço: <a href="suporte.html">Suporte técnico</a>.</p>
+    <p>Esta página mudou de endereço: <a href="index.html#servicos">ver nossos serviços</a>.</p>
 </body>
 </html>

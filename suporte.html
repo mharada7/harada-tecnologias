@@ -2,160 +2,21 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suporte técnico em Manaus | Harada Tecnologias</title>
-    <meta name="description" content="Formatação de computadores, backup, instalação do Office, troca de frontal de celular e suporte a sistemas de PDV em Manaus - AM.">
-
-    <link rel="icon" type="image/png" href="img/icone.png">
-    <link rel="apple-touch-icon" href="img/icone.png">
-
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="pt_BR">
-    <meta property="og:site_name" content="Harada Tecnologias">
-    <meta property="og:title" content="Suporte técnico | Harada Tecnologias">
-    <meta property="og:description" content="Computadores, celulares e sistemas de PDV em Manaus - AM.">
-    <meta property="og:url" content="https://mharada7.github.io/harada-tecnologias/suporte.html">
-    <meta property="og:image" content="https://mharada7.github.io/harada-tecnologias/img/previa.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Logo da Harada Tecnologias: cérebro em polígonos azul e vermelho e o slogan Conectando a Amazônia ao Futuro">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
-    <!-- fonte japonesa: baixa só os caracteres de 原田テクノロジー準備中支援開発 -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600&text=%E5%8E%9F%E7%94%B0%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E6%BA%96%E5%82%99%E4%B8%AD%E6%94%AF%E6%8F%B4%E9%96%8B%E7%99%BA&display=swap" rel="stylesheet">
-    <!-- ?v=... obriga o navegador a baixar o CSS novo: mude o número sempre que alterar o style.css -->
-    <link rel="stylesheet" href="style.css?v=0.12">
+    <title>Harada Tecnologias</title>
+    <!-- esta página foi dividida em computadores.html, celulares.html e pdv.html.
+         Quem tiver o link antigo é levado para a página certa. -->
+    <script>
+        var destinos = {
+            "#computadores": "computadores.html",
+            "#celulares": "celulares.html",
+            "#pdv": "pdv.html"
+        };
+        location.replace(destinos[location.hash] || "index.html#servicos");
+    </script>
+    <!-- se o JavaScript estiver desligado: vai para os serviços do Início -->
+    <meta http-equiv="refresh" content="0; url=index.html#servicos">
 </head>
 <body>
-    <header class="topo">
-        <a class="topo-marca" href="index.html">
-            <img src="img/cerebro.png" alt="" width="760" height="630">
-            <span>Harada <span class="topo-sub">Tecnologias</span></span>
-        </a>
-        <nav class="menu" aria-label="Menu principal">
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="suporte.html" aria-current="page">Suporte<span class="some-celular"> técnico</span></a></li>
-                <li><a href="desenvolvimento.html">Desenvolvimento</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <div class="titulo-pagina">
-            <p class="titulo-jp" lang="ja" aria-hidden="true">支援</p>
-            <h1>Suporte técnico</h1>
-            <p>Computadores, celulares e sistemas de PDV funcionando de novo, com atendimento em Manaus - AM.</p>
-        </div>
-
-        <section id="computadores" class="fundo-escuro">
-            <h2>Computadores</h2>
-            <ul class="cartoes">
-                <li>
-                    <!-- ícone: notebook -->
-                    <svg class="icone" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/>
-                    </svg>
-                    <h3>Formatação de computadores</h3>
-                    <p>Sistema limpo e rápido, com drivers e programas essenciais instalados.</p>
-                </li>
-                <li>
-                    <!-- ícone: nuvem com seta para cima -->
-                    <svg class="icone" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M12 13v8"/>
-                        <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/>
-                        <path d="m8 17 4-4 4 4"/>
-                    </svg>
-                    <h3>Serviço de backup</h3>
-                    <p>Seus arquivos, fotos e documentos guardados com segurança antes de qualquer serviço.</p>
-                </li>
-                <li>
-                    <!-- ícone: documento -->
-                    <svg class="icone" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/>
-                        <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
-                        <path d="M16 13H8"/>
-                        <path d="M16 17H8"/>
-                        <path d="M10 9H8"/>
-                    </svg>
-                    <h3>Instalação do pacote Office</h3>
-                    <p>Word, Excel e PowerPoint instalados e prontos para usar.</p>
-                </li>
-            </ul>
-            <p class="acao">
-                <a class="botao" href="https://wa.me/5592992282487?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento%20para%20o%20meu%20computador." target="_blank" rel="noopener">
-                    Orçamento para computador
-                </a>
-            </p>
-        </section>
-
-        <section id="celulares">
-            <h2>Celulares</h2>
-            <ul class="cartoes cartoes-2">
-                <li>
-                    <!-- ícone: celular -->
-                    <svg class="icone" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <rect width="14" height="20" x="5" y="2" rx="2" ry="2"/>
-                        <path d="M12 18h.01"/>
-                    </svg>
-                    <h3>Troca de frontal</h3>
-                    <p>Tela quebrada, trincada ou sem toque? Trocamos o frontal do seu celular.</p>
-                </li>
-                <li>
-                    <!-- ícone: setas indo e voltando (transferência) -->
-                    <svg class="icone" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="m16 3 4 4-4 4"/>
-                        <path d="M20 7H4"/>
-                        <path d="m8 21-4-4 4-4"/>
-                        <path d="M4 17h16"/>
-                    </svg>
-                    <h3>Suporte para celular</h3>
-                    <p>Configuração do aparelho, transferência de dados para o celular novo e ajuda com contas e aplicativos.</p>
-                </li>
-            </ul>
-            <p class="acao">
-                <a class="botao" href="https://wa.me/5592992282487?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento%20para%20o%20meu%20celular." target="_blank" rel="noopener">
-                    Orçamento para celular
-                </a>
-            </p>
-        </section>
-
-        <section id="pdv" class="fundo-escuro centro">
-            <h2>Sistemas de PDV</h2>
-            <p class="intro">
-                Instalação, configuração e suporte de sistemas de PDV para bares,
-                restaurantes e food service. Seu caixa funcionando para você não perder vendas.
-            </p>
-            <ul class="cartoes">
-                <li>Instalação</li>
-                <li>Configuração</li>
-                <li>Suporte</li>
-            </ul>
-            <p class="acao">
-                <a class="botao" href="https://wa.me/5592992282487?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20preciso%20de%20suporte%20para%20o%20sistema%20de%20PDV." target="_blank" rel="noopener">
-                    Pedir suporte para o PDV
-                </a>
-            </p>
-        </section>
-
-   </main>
-
-    <footer id="contato">
-        <h2>Contato</h2>
-        <a class="botao" href="https://wa.me/5592992282487?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener">
-            Chamar no WhatsApp
-        </a>
-        <p class="contato-numero">WhatsApp: (92) 99228-2487</p>
-        <ul class="contato-lista">
-            <li>E-mail: <a href="mailto:matheus.haradati@gmail.com">matheus.haradati@gmail.com</a></li>
-            <li>Instagram: <a href="https://www.instagram.com/haradatecnologias/" target="_blank" rel="noopener">@haradatecnologias</a></li>
-            <li>Acessórios: <a href="https://wa.me/c/5592992282487" target="_blank" rel="noopener">catálogo no WhatsApp</a></li>
-            <li>Loja online · Manaus - AM</li>
-        </ul>
-        <p class="copyright">&copy; 2026 Harada Tecnologias</p>
-    </footer>
+    <p>Esta página mudou de endereço: <a href="index.html#servicos">ver nossos serviços</a>.</p>
 </body>
 </html>

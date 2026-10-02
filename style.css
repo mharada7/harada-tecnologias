@@ -100,24 +100,26 @@ a {
     border-bottom-color: var(--aka);
 }
 
-/* celular: marca e menu centralizados, um embaixo do outro */
-@media (max-width: 600px) {
+/* telas médias e celular: marca em cima e menu embaixo, centralizados
+   (o menu tem 6 links e não cabe ao lado da marca abaixo de ~900px) */
+@media (max-width: 900px) {
     .topo {
         flex-direction: column;
     }
 
     .menu ul {
         justify-content: center;
+    }
+}
+
+/* celular: links do menu menores */
+@media (max-width: 600px) {
+    .menu ul {
         gap: 0 12px;
     }
 
     .menu a {
         font-size: 0.85rem;
-    }
-
-    /* "Suporte técnico" vira só "Suporte" para o menu caber em uma linha */
-    .some-celular {
-        display: none;
     }
 }
 
@@ -322,7 +324,7 @@ a {
     }
 }
 
-/* ===== Título das páginas internas (Suporte, Desenvolvimento) ===== */
+/* ===== Título das páginas internas (Computadores, Celulares, PDV, Desenvolvimento) ===== */
 .titulo-pagina {
     position: relative;   /* referência para as cantoneiras */
     text-align: center;
@@ -427,7 +429,7 @@ footer h2::after {
     text-align: center;   /* o botão fica no meio, mesmo em seções alinhadas à esquerda */
 }
 
-/* ===== Portas da página inicial (Suporte | Desenvolvimento) ===== */
+/* ===== Portas da página inicial (um cartão para cada página de serviço) ===== */
 .portas {
     display: grid;
     grid-template-columns: 1fr;   /* celular: uma embaixo da outra */
