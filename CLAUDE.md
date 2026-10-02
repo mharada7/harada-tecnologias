@@ -109,24 +109,32 @@ Slogan: "Conectando a Amazônia ao Futuro".
    atual com `aria-current="page"`) e rodapé `footer#contato` repetidos em cada página
    (sem framework: ao mudar menu/rodapé, mudar nos 3 arquivos). Fundos alternados agora por
    classe `.fundo-escuro` (não mais `nth-child`); `.centro` centraliza o texto.
-   - `index.html`: `.hero` (cérebro + nome + hanko), seção "Serviços" com 4 "portas"
+   - `index.html`: `.hero` compacta (cérebro 104px no celular / 200px a partir de 768px,
+     "HARADA" no máx. 3,5rem): nome em `<p class="marca">` (só visual), 原田テクノロジー,
+     slogan, **h1 `.chamada`** "Soluções digitais e suporte técnico em Manaus." (é o h1 por
+     SEO) e `.botoes` (WhatsApp + "Ver serviços" → `#servicos`). Meta: no celular 375x667 o
+     título "Serviços" já aparece na 1ª tela. Depois: seção "Serviços" (`id="servicos"`) com 4 "portas"
      em grade 2x2 (`.portas`/`.porta`): Computadores, Celulares, Sistemas de PDV (links para
-     `assistencia.html#computadores|#celulares|#pdv`) e Desenvolvimento. Cada porta: ícone,
+     `suporte.html#computadores|#celulares|#pdv`) e Desenvolvimento. Cada porta: ícone,
      h3, frase curta, `.checklist` (✓; item `.breve` com ◌) e `.porta-link` alinhado no
      fundo (flex column + `margin-top: auto`). Depois, faixa de acessórios com botões para
      o catálogo do WhatsApp e Instagram.
-   - `assistencia.html` (修理): Computadores, Celulares (`.cartoes-2`), Sistemas de PDV
+   - `suporte.html` (支援 = apoio/suporte): Computadores, Celulares (`.cartoes-2`), Sistemas de PDV
      (mesma ordem das portas do Início). Cada seção termina com o seu botão de WhatsApp
      (`p.acao`, mensagem com o assunto: computador / celular / PDV); não há mais a seção
      "Peça um orçamento".
    - `desenvolvimento.html` (開発): `.abas` (atalhos), Cardápios Digitais + portfólio,
      seção `#em-breve` com cartão Backup Checker (`.em-breve` + `.etiqueta`).
+   - Nomenclatura padronizada: **"Suporte técnico"** (nunca "Assistência técnica"). A página
+     foi renomeada de `assistencia.html` para `suporte.html`; o `assistencia.html` que
+     ficou é só um redirecionamento (meta refresh) para não quebrar links antigos.
    - Páginas internas usam `.titulo-pagina` (h1 + kanji `.titulo-jp`). No celular o menu
-     mostra só "Assistência" (`.some-celular`) para caber em uma linha a 360px.
+     mostra só "Suporte" (`.some-celular`) para caber em uma linha a 360px.
    - Fotos de `img/produtos/` removidas.
-   - Cache: o CSS é carregado como `style.css?v=0.10` nas 3 páginas. Ao mudar o `style.css`,
+   - Cache: o CSS é carregado como `style.css?v=0.12` nas 3 páginas. Ao mudar o `style.css`,
      subir o número nas 3 (senão o celular mistura CSS antigo com HTML novo e "distorce").
-   - Menu testado em 320px (`@media (max-width: 360px)` diminui nome e links).
+   - Menu testado em 320px (`@media (max-width: 360px)` diminui nome e links). Há um 2º
+     bloco 360px (slogan) DEPOIS do de 480px, porque a regra mais abaixo vence.
 10. Futuro: formulário de orçamento, domínio próprio, página própria do Backup Checker
 
 ## Como o Claude deve trabalhar comigo

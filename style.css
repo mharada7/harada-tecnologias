@@ -115,7 +115,7 @@ a {
         font-size: 0.85rem;
     }
 
-    /* "Assistência técnica" vira só "Assistência" para o menu caber em uma linha */
+    /* "Suporte técnico" vira só "Suporte" para o menu caber em uma linha */
     .some-celular {
         display: none;
     }
@@ -140,7 +140,7 @@ a {
 .hero {
     position: relative;   /* referência para o carimbo e as cantoneiras */
     text-align: center;
-    padding: 72px 16px 56px;
+    padding: 32px 16px;
 }
 
 /* cantoneiras finas nos cantos, como no cartaz */
@@ -190,13 +190,14 @@ a {
 .cerebro {
     display: block;
     width: 100%;
-    max-width: 240px;   /* nunca passa de 240px, e encolhe no celular */
+    max-width: 104px;   /* celular: pequeno, para a frase e os botões caberem na 1ª tela */
     height: auto;       /* mantém a proporção */
     margin: 0 auto;
 }
 
 .marca {
-    margin: 16px 0 0;
+    margin: 8px 0 0;
+    font-family: var(--fonte-titulo);   /* agora é um <p>, então a fonte dos títulos vem daqui */
 }
 
 .marca span {
@@ -206,22 +207,23 @@ a {
 
 .marca-nome {
     font-weight: 800;
-    font-size: clamp(3rem, 14vw, 5.5rem);   /* mínimo, ideal, máximo */
+    font-size: clamp(2.4rem, 11vw, 3.5rem);   /* mínimo, ideal, máximo */
     line-height: 1;
     letter-spacing: 0.02em;
 }
 
 .marca-sub {
-    margin-top: 12px;
+    margin-top: 8px;
     margin-right: -0.5em;   /* compensa o espaço depois da última letra */
     font-family: var(--fonte-texto);
     font-weight: 400;
-    font-size: clamp(1rem, 4.5vw, 1.6rem);
+    font-size: clamp(0.85rem, 3.6vw, 1.1rem);
     letter-spacing: 0.5em;
 }
 
 .marca-jp {
-    margin: 16px -0.6em 0 0;
+    margin: 8px -0.6em 0 0;
+    font-size: 0.85rem;
     font-family: var(--fonte-jp);
     font-weight: 600;
     color: var(--aka);
@@ -229,8 +231,8 @@ a {
 }
 
 .slogan {
-    margin: 24px 0 0;
-    font-size: 1.15rem;
+    margin: 12px 0 0;
+    font-size: 1rem;
 }
 
 /* linhas vermelhas antes e depois do slogan */
@@ -249,10 +251,32 @@ a {
     color: var(--aka);
 }
 
+/* a frase principal (h1): diz o que fazemos */
+.chamada {
+    max-width: 30ch;   /* "ch" = largura de um caractere: quebra a frase em ~30 letras */
+    margin: 20px auto 0;
+    font-size: clamp(1.15rem, 4.6vw, 1.5rem);
+    font-weight: 700;
+    line-height: 1.3;
+    text-wrap: balance;   /* divide a frase em linhas de tamanho parecido */
+}
+
+.hero .botoes {
+    margin: 20px 0 0;
+    gap: 10px;
+}
+
+/* botões da abertura um pouco menores, para os dois caberem lado a lado no celular */
+.hero .botao,
+.hero .botao-secundario {
+    padding: 10px 14px;
+    font-size: 0.85rem;
+}
+
 /* em telas estreitas (celular), slogan e traços menores para caber em uma linha */
 @media (max-width: 480px) {
     .slogan {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
     }
 
     .slogan::before,
@@ -262,20 +286,34 @@ a {
     }
 }
 
+/* celulares bem estreitos (320px): slogan ainda menor. Precisa vir DEPOIS do bloco
+   de 480px: com o mesmo peso, a regra que está mais abaixo no arquivo vence */
+@media (max-width: 360px) {
+    .slogan {
+        font-size: 0.8rem;
+    }
+
+    .slogan::before,
+    .slogan::after {
+        width: 12px;
+        margin: 0 6px;
+    }
+}
+
 /* em telas largas (computador): cérebro ao lado do nome, como na prévia do WhatsApp.
-   Abaixo de 960px não cabe (cérebro + espaço + "HARADA" ≈ 860px), então fica empilhado. */
-@media (min-width: 960px) {
+   Em telas menores fica empilhado. */
+@media (min-width: 768px) {
     .hero {
         display: flex;              /* filhos lado a lado */
         align-items: center;        /* centralizados na vertical */
         justify-content: center;    /* e na horizontal */
-        gap: 56px;                  /* espaço entre o cérebro e os textos */
-        padding: 64px 32px;
+        gap: 48px;                  /* espaço entre o cérebro e os textos */
+        padding: 48px 32px;
     }
 
     .cerebro {
-        width: 320px;
-        max-width: 320px;
+        width: 200px;
+        max-width: 200px;
         margin: 0;
     }
 
@@ -284,14 +322,14 @@ a {
     }
 }
 
-/* ===== Título das páginas internas (Assistência, Desenvolvimento) ===== */
+/* ===== Título das páginas internas (Suporte, Desenvolvimento) ===== */
 .titulo-pagina {
     position: relative;   /* referência para as cantoneiras */
     text-align: center;
     padding: 56px 16px 48px;
 }
 
-/* 修理 / 開発 em vermelho, acima do título */
+/* 支援 / 開発 em vermelho, acima do título */
 .titulo-jp {
     margin: 0 -0.4em 8px 0;
     font-family: var(--fonte-jp);
@@ -389,7 +427,7 @@ footer h2::after {
     text-align: center;   /* o botão fica no meio, mesmo em seções alinhadas à esquerda */
 }
 
-/* ===== Portas da página inicial (Assistência | Desenvolvimento) ===== */
+/* ===== Portas da página inicial (Suporte | Desenvolvimento) ===== */
 .portas {
     display: grid;
     grid-template-columns: 1fr;   /* celular: uma embaixo da outra */
