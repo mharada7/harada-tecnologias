@@ -24,7 +24,8 @@ Slogan: "Conectando a Amazônia ao Futuro".
 ## Contato (já definido)
 - WhatsApp: (92) 99228-2487 (link `https://wa.me/5592992282487?text=...`)
 - E-mail: matheus.haradati@gmail.com
-- Horário: 24 horas
+- Loja **somente online**, em Manaus - AM (sem endereço físico, sem mapa).
+- Horário: não exibido (o "24 horas" foi retirado para não prometer o que não dá para cumprir).
 
 ## Links
 - Site no ar: https://mharada7.github.io/harada-tecnologias/
@@ -35,7 +36,7 @@ Slogan: "Conectando a Amazônia ao Futuro".
 
 ## A definir (perguntar ao Matheus antes de usar)
 - Preços (exibir ou não no site?)
-- Contato: endereço, redes sociais
+- Contato: redes sociais; horário real de atendimento (se quiser exibir)
 - Domínio (ex.: haradatecnologias.com.br)
 
 ## Identidade visual: tema japonês sutil (desde a v0.4)
@@ -65,7 +66,7 @@ Slogan: "Conectando a Amazônia ao Futuro".
 1. ✅ v0.1: página inicial simples (`index.html`) com nome da loja e contato
 2. ✅ v0.2: estilo com CSS (logo, cores, fontes, layout que funcione no celular)
 3. v0.3: seções de Serviços de T.I. e Eletrônicos (melhorar com descrições/ícones)
-4. v0.4: ✅ botão de WhatsApp · ✅ identidade Harada · ⬜ mapa/endereço
+4. ✅ v0.4: botão de WhatsApp · identidade Harada · "Loja online · Manaus - AM" (sem mapa)
 5. ✅ v0.5: publicar no GitHub Pages
 6. ✅ v0.6: seção **Cardápios Digitais** (`id="cardapios"`): intro, 3 benefícios, portfólio
    (`.portfolio` / `.projeto`, cartão "Em breve" 準備中, modelo comentado no HTML,

@@ -310,6 +310,13 @@ section h2::after {
 }
 
 /* ===== Contato ===== */
+/* número logo abaixo do botão (proximidade) e um respiro antes do resto */
+.contato-numero {
+    margin-top: 12px;
+    margin-bottom: 32px;
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+}
 
 /* ===== Botão de chamada para ação ===== */
 .botao {
