@@ -93,7 +93,13 @@ Slogan: "Conectando a Amazônia ao Futuro".
    Matheus atualiza a pedido do cliente, em minutos; possível plano de manutenção mensal).
    NÃO prometer que o dono edita sozinho, a menos que o cardápio passe a ler os dados
    de uma planilha Google Sheets (ideia para a v2 do cardápio).
-7. Futuro: catálogo de produtos, formulário de orçamento, domínio próprio, SEO
+7. ✅ v0.7 (SEO básico): `<title>` descritivo, `meta description`, Open Graph + twitter:card
+   (prévia no WhatsApp com `img/previa.png`, 1200x630: cérebro + nome + slogan + hanko,
+   gerada a partir de HTML com Edge headless) e favicon/apple-touch-icon `img/icone.png`
+   (180x180: o CÉREBRO, marca registrada, sobre fundo washi arredondado; o Matheus
+   preferiu o cérebro ao carimbo 原田). `og:image` precisa de URL absoluta.
+   WhatsApp guarda a prévia em cache: testar com `?v=2` no fim do link.
+8. Futuro: catálogo de produtos, formulário de orçamento, domínio próprio, menu de navegação
 
 ## Como o Claude deve trabalhar comigo
 A metodologia está nas preferências globais (`~/.claude/CLAUDE.md`): iniciante,
