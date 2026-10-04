@@ -772,16 +772,10 @@ footer a:not(.botao) {
     color: var(--washi);
 }
 
-/* número logo abaixo do botão (proximidade) e um respiro antes do resto */
-.contato-numero {
-    margin: 12px 0 24px;
-    font-size: 0.95rem;
-    opacity: 0.8;
-}
-
+/* margem de cima = respiro entre o botão e a lista */
 .contato-lista {
     list-style: none;
-    margin: 0;
+    margin: 24px 0 0;
     padding: 0;
 }
 
