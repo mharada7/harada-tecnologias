@@ -714,6 +714,96 @@ footer h2::after {
     border-radius: 999px;
 }
 
+/* ===== Planos de suporte (pdv.html) ===== */
+.planos {
+    display: grid;
+    grid-template-columns: 1fr;   /* celular: um embaixo do outro */
+    gap: 24px;
+    max-width: 760px;
+}
+
+@media (min-width: 720px) {
+    .planos {
+        grid-template-columns: 1fr 1fr;   /* computador: lado a lado */
+    }
+}
+
+.plano {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 24px;
+    background-color: var(--branco);
+    border: 1px solid var(--linha);
+    border-top: 3px solid var(--ai);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(20, 27, 43, 0.05);
+}
+
+/* o plano mais completo ganha a borda vermelha */
+.plano-destaque {
+    border-top-color: var(--aka);
+}
+
+.plano .etiqueta {
+    align-self: center;   /* no flex, sem isso a etiqueta esticaria na largura toda */
+}
+
+.plano h3 {
+    margin: 0 0 4px;
+    font-family: var(--fonte-titulo);
+    font-size: 1.3rem;
+}
+
+.plano-dias {
+    margin: 0 0 20px;
+    color: var(--texto-suave);
+}
+
+.plano .checklist {
+    margin-bottom: 0;
+}
+
+/* suporte avulso: faixa abaixo dos planos (alternativa sem mensalidade) */
+.avulso {
+    display: flex;
+    flex-direction: column;   /* celular: texto em cima, botão embaixo */
+    align-items: center;
+    gap: 20px;
+    max-width: 760px;
+    margin-top: 48px;
+    padding: 28px 24px;
+    background-color: var(--branco);
+    border: 1px solid var(--linha);
+    border-radius: 8px;
+}
+
+@media (min-width: 720px) {
+    .avulso {
+        flex-direction: row;   /* computador: texto à esquerda, botão à direita */
+        text-align: left;
+    }
+}
+
+.avulso h3 {
+    margin: 0 0 6px;
+    font-family: var(--fonte-titulo);
+    font-size: 1.15rem;
+}
+
+.avulso p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--texto-suave);
+}
+
+.avulso .etiqueta {
+    margin-bottom: 8px;
+}
+
+.avulso .botao-secundario {
+    flex-shrink: 0;   /* o botão não "encolhe" nem quebra o texto em duas linhas */
+}
+
 /* ===== Botões ===== */
 /* botão principal (vermelho): a ação mais importante da seção */
 .botao {

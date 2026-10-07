@@ -26,7 +26,7 @@
     <!-- fonte japonesa: baixa só os caracteres de 原田テクノロジー準備中支援開発 -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600&text=%E5%8E%9F%E7%94%B0%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E6%BA%96%E5%82%99%E4%B8%AD%E6%94%AF%E6%8F%B4%E9%96%8B%E7%99%BA&display=swap" rel="stylesheet">
     <!-- ?v=... obriga o navegador a baixar o CSS novo: mude o número sempre que alterar o style.css -->
-    <link rel="stylesheet" href="style.css?v=0.14">
+    <link rel="stylesheet" href="style.css?v=0.15">
 </head>
 <body>
     <!-- TOPO (igual em todas as páginas; só muda o aria-current do link da página atual) -->
@@ -65,14 +65,67 @@
                 <li>Configuração</li>
                 <li>Suporte</li>
             </ul>
+            <!-- leva o cliente aos planos (a ação principal fica lá) -->
             <p class="acao">
-                <a class="botao" href="https://wa.me/5592992282487?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20preciso%20de%20suporte%20para%20o%20sistema%20de%20PDV." target="_blank" rel="noopener">
-                    Pedir suporte para o PDV
-                </a>
+                <a class="botao-secundario" href="#planos">Conhecer os planos ↓</a>
             </p>
         </section>
 
-        <section class="centro">
+        <!-- PLANOS: sem preços no site (vão na proposta/contrato) -->
+        <section id="planos" class="centro">
+            <h2>Planos de suporte mensal</h2>
+            <p class="intro">
+                Para quem não pode ver o caixa parado: suporte dedicado ao seu sistema de PDV,
+                com chamados ilimitados e prioridade no atendimento.
+            </p>
+
+            <div class="planos">
+                <article class="plano">
+                    <h3>Plano Comercial</h3>
+                    <p class="plano-dias">Atendimento de segunda a sexta</p>
+                    <ul class="checklist">
+                        <li>Chamados ilimitados</li>
+                        <li>Abertura de chamado a qualquer hora</li>
+                        <li>Atendimento prioritário</li>
+                        <li>Suporte remoto e visita técnica quando necessário</li>
+                    </ul>
+                </article>
+                <article class="plano plano-destaque">
+                    <span class="etiqueta">Mais completo</span>
+                    <h3>Plano Full</h3>
+                    <p class="plano-dias">Atendimento 7 dias por semana</p>
+                    <ul class="checklist">
+                        <li>Tudo do Plano Comercial</li>
+                        <li>Fins de semana e feriados</li>
+                        <li>Ideal para quem abre à noite e no domingo</li>
+                    </ul>
+                </article>
+            </div>
+
+            <!-- escopo (só sistema/software), condições e base legal: ficam para a conversa e o contrato -->
+            <p class="acao">
+                <a class="botao" href="https://wa.me/5592992282487?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20uma%20proposta%20dos%20planos%20de%20suporte%20mensal%20para%20o%20meu%20PDV." target="_blank" rel="noopener">
+                    Solicitar proposta
+                </a>
+            </p>
+
+            <!-- alternativa sem mensalidade: botão contornado para não competir com o "Solicitar proposta" -->
+            <div class="avulso">
+                <div class="avulso-texto">
+                    <span class="etiqueta">Sem mensalidade</span>
+                    <h3>Suporte avulso e visita técnica</h3>
+                    <p>
+                        Você paga só pelo atendimento. Resolvemos remotamente sempre que possível
+                        ou vamos até o seu estabelecimento em Manaus.
+                    </p>
+                </div>
+                <a class="botao-secundario" href="https://wa.me/5592992282487?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20solicitar%20um%20atendimento%20avulso%20(remoto%20ou%20visita%20t%C3%A9cnica)%20para%20o%20meu%20PDV." target="_blank" rel="noopener">
+                    Solicitar visita técnica
+                </a>
+            </div>
+        </section>
+
+        <section class="fundo-escuro centro">
             <h2>Cardápio digital também</h2>
             <p class="intro">
                 Para bares, restaurantes e lanchonetes, também criamos cardápios digitais
@@ -81,7 +134,7 @@
             <a class="botao-secundario" href="desenvolvimento.html#cardapios">Ver cardápios digitais →</a>
         </section>
 
-        <section class="fundo-escuro centro">
+        <section class="centro">
             <h2>Outros serviços</h2>
             <nav class="abas" aria-label="Outros serviços">
                 <a href="computadores.html">Computadores</a>
