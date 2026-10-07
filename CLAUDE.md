@@ -28,9 +28,16 @@ Slogan: "Conectando a Amazônia ao Futuro".
 - Horário: não exibido (o "24 horas" foi retirado para não prometer o que não dá para cumprir).
 
 ## Links
-- Site no ar: https://mharada7.github.io/harada-tecnologias/
+- Site no ar: **https://haradatecnologias.com.br/** (domínio próprio desde 04/10/2026,
+  com "Enforce HTTPS" ligado).
+- Domínio no Registro.br (DNS do próprio Registro.br): 4 registros A
+  185.199.108.153 / .109 / .110 / .111 (nome vazio) + CNAME `www` → `mharada7.github.io`.
+  O arquivo `CNAME` na raiz do repositório diz ao GitHub qual é o domínio: não apagar.
+- `www.`, `http://` e o endereço antigo `mharada7.github.io/harada-tecnologias/`
+  redirecionam (301) para `https://haradatecnologias.com.br/`.
 - Repositório: https://github.com/mharada7/harada-tecnologias (branch `main`)
-- GitHub Pages publica a partir de `main` / `(root)`: cada `git push` atualiza o site.
+- GitHub Pages publica a partir de `main` / `(root)`: cada `git push` atualiza o site
+  (leva cerca de 1 minuto; a CDN pode guardar a página antiga por até 10 minutos).
 - O endereço antigo (`manaus-tecnologias`) não funciona mais (404).
 - A pasta local continua `C:\ManausTecnologias\site` (não renomeada).
 
@@ -45,7 +52,6 @@ Slogan: "Conectando a Amazônia ao Futuro".
 ## A definir (perguntar ao Matheus antes de usar)
 - Preços (exibir ou não no site?)
 - Contato: redes sociais; horário real de atendimento (se quiser exibir)
-- Domínio (ex.: haradatecnologias.com.br)
 
 ## Identidade visual: tema japonês sutil (desde a v0.4)
 - Imagem: `img/cerebro.png` (760x630, recortada do cartaz da marca; fundo #F6F5F1,
@@ -146,7 +152,9 @@ Slogan: "Conectando a Amazônia ao Futuro".
     - `suporte.html` e `assistencia.html` agora são só redirecionamentos (JS lê o `#hash`:
       `#celulares` → `celulares.html` etc.; sem hash → `index.html#servicos`).
     - CSS em `style.css?v=0.13`. A seção v0.9 acima descreve a estrutura anterior.
-11. Futuro: formulário de orçamento, domínio próprio, página própria do Backup Checker
+11. ✅ v0.11: domínio próprio **haradatecnologias.com.br** (ver Links) e número do WhatsApp
+    removido do rodapé (só o botão; `.contato-lista` ganhou `margin-top: 24px`). CSS em `style.css?v=0.14`.
+12. Futuro: formulário de orçamento, página própria do Backup Checker
 
 ## Como o Claude deve trabalhar comigo
 A metodologia está nas preferências globais (`~/.claude/CLAUDE.md`): iniciante,
