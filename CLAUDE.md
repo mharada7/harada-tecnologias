@@ -154,7 +154,20 @@ Slogan: "Conectando a Amazônia ao Futuro".
     - CSS em `style.css?v=0.13`. A seção v0.9 acima descreve a estrutura anterior.
 11. ✅ v0.11: domínio próprio **haradatecnologias.com.br** (ver Links) e número do WhatsApp
     removido do rodapé (só o botão; `.contato-lista` ganhou `margin-top: 24px`). CSS em `style.css?v=0.14`.
-12. Futuro: formulário de orçamento, página própria do Backup Checker
+12. ✅ v0.12 (07/10/2026): `pdv.html` vira um funil de venda:
+    - "O que fazemos" termina em `.botao-secundario` "Conhecer os planos ↓" (`#planos`), não mais WhatsApp.
+    - Seção `#planos` "Planos de suporte mensal": `.planos` (2 colunas a partir de 720px) com 2
+      `.plano` (Comercial: seg–sex; Full: 7 dias, `.plano-destaque` + etiqueta "Mais completo")
+      e o ÚNICO botão vermelho da página, "Solicitar proposta" (WhatsApp).
+    - Abaixo, `.avulso` "Suporte avulso e visita técnica" (etiqueta "Sem mensalidade",
+      `.botao-secundario` "Solicitar visita técnica").
+    - Por decisão do Matheus, o site NÃO mostra preços (Comercial R$ 800 / Full R$ 1.200), nem
+      escopo (só software; hardware/rede à parte), condições ou base legal: isso fica para a
+      conversa e o futuro contrato. Não citar iComanda.
+    - CSS em `style.css?v=0.15`. Lição: especificidade (`.avulso p` vencia `.etiqueta`; usar `<span>`).
+13. Futuro: contrato dos planos de suporte, faixa de números no Início (vinda do registro privado
+    de atendimentos no Google Planilhas; NUNCA dados de clientes no repositório, que é público),
+    formulário de orçamento, página própria do Backup Checker
 
 ## Como o Claude deve trabalhar comigo
 A metodologia está nas preferências globais (`~/.claude/CLAUDE.md`): iniciante,
