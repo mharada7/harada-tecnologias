@@ -880,3 +880,44 @@ footer a:not(.botao) {
     font-size: 0.85rem;
     opacity: 0.7;
 }
+
+/* ===== Efeito 3D (nível 1) =====
+   A classe .efeito-3d é colocada pelo efeito-3d.js (só com mouse e sem "reduzir movimento").
+   O JS muda --rx e --ry (ângulos) e --brilho-x/y (posição do brilho).
+   Fica no FIM do arquivo de propósito: com a mesma especificidade de .porta:hover,
+   a regra que vem por último vence. */
+.efeito-3d,
+.efeito-3d:hover {
+    position: relative;   /* referência para o brilho (::after) */
+    /* perspective = distância do "olho" até o cartão: quanto menor, mais forte o 3D */
+    transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg))
+               translateY(var(--sobe, 0px));
+    transition: transform 0.5s ease-out, box-shadow 0.3s;   /* volta suave ao sair */
+}
+
+.efeito-3d:hover {
+    --sobe: -4px;   /* continua "subindo" um pouco, como antes */
+    box-shadow: 0 16px 32px rgba(20, 27, 43, 0.14);
+}
+
+/* enquanto o mouse se mexe, a resposta é quase imediata */
+.efeito-3d.inclinando {
+    transition: transform 0.1s linear, box-shadow 0.3s;
+}
+
+/* brilho de luz que acompanha o mouse */
+.efeito-3d::after {
+    content: "";
+    position: absolute;
+    inset: 0;                   /* cobre o cartão inteiro (top/right/bottom/left = 0) */
+    border-radius: inherit;     /* mesmos cantos arredondados do cartão */
+    background: radial-gradient(circle at var(--brilho-x, 50%) var(--brilho-y, 50%),
+                rgba(255, 255, 255, 0.45), transparent 60%);
+    opacity: 0;
+    pointer-events: none;       /* o brilho não "rouba" o clique do link */
+    transition: opacity 0.3s;
+}
+
+.efeito-3d:hover::after {
+    opacity: 1;
+}
