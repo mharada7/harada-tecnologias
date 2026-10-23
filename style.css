@@ -319,6 +319,12 @@ a {
         margin: 0;
     }
 
+    /* cérebro 3D (cerebro-3d.js): maior que a imagem, é o destaque da página */
+    .cerebro-3d {
+        width: 280px;
+        max-width: 280px;
+    }
+
     .marca {
         margin-top: 0;
     }
