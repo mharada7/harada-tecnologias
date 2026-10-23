@@ -1,0 +1,5 @@
+# Regras para os robôs de busca (Google, Bing...): podem ler o site inteiro.
+User-agent: *
+Allow: /
+
+Sitemap: https://haradatecnologias.com.br/sitemap.xml
