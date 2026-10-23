@@ -165,7 +165,26 @@ Slogan: "Conectando a Amazônia ao Futuro".
       escopo (só software; hardware/rede à parte), condições ou base legal: isso fica para a
       conversa e o futuro contrato. Não citar iComanda.
     - CSS em `style.css?v=0.15`. Lição: especificidade (`.avulso p` vencia `.etiqueta`; usar `<span>`).
-13. Futuro: contrato dos planos de suporte, faixa de números no Início (vinda do registro privado
+13. ✅ v0.13 (18–23/10/2026): **3D como destaque** (não o site inteiro, por desempenho em
+    celulares simples, SEO e acessibilidade):
+    - Nível 1, `efeito-3d.js` (1º JS do site, nas 5 páginas, `defer`): `.porta`, `.plano` e
+      `.cartoes > li` inclinam seguindo o mouse (`perspective` + `rotateX/Y`, até 8°) com brilho
+      `::after`. O JS só calcula e grava `--rx/--ry/--brilho-x/y`; o CSS (`.efeito-3d`, no FIM do
+      style.css para vencer `.porta:hover`) desenha.
+    - Nível 2, `cerebro-3d.js` (só no `index.html`, `type="module"`): troca a `img.cerebro` por um
+      cérebro 3D de polígonos feito com **Three.js 0.170.0** (CDN jsDelivr, ~170 KB gzip, baixado
+      só quando usado): icosaedro deformado (sorteio com semente = sempre igual), azul/vermelho,
+      arestas, bolinhas, trilhas, anel e tronco (cone de 3 lados virado para baixo); balança
+      ±20° (0.35 rad, para o vermelho nunca sumir) e segue o mouse; pausa fora da tela.
+      Ao mudar o JS, subir o `?v=` dele no index.html (hoje `cerebro-3d.js?v=0.18`). Canvas
+      `.cerebro-3d` de 280px a partir de 768px. A imagem continua no HTML como reserva.
+    - **Travas:** só com mouse (nível 1) / tela ≥ 768px + WebGL (nível 2), sem "reduzir movimento"
+      e sem economia de dados. O PC do Matheus tem as animações do Windows DESLIGADAS, o que o
+      navegador trata como "reduzir movimento": para testar, F12 → Ctrl+Shift+P →
+      "Emulate CSS prefers-reduced-motion: no-preference". Módulos não rodam via `file://`:
+      testar com Live Server.
+    - CSS em `style.css?v=0.17`. Nível 3 (site imersivo) descartado por enquanto.
+14. Futuro: contrato dos planos de suporte, faixa de números no Início (vinda do registro privado
     de atendimentos no Google Planilhas; NUNCA dados de clientes no repositório, que é público),
     formulário de orçamento, página própria do Backup Checker
 

@@ -141,6 +141,28 @@ function criarCerebro(THREE) {
         new THREE.PointsMaterial({ size: 0.45, map: criarTexturaBolinha(THREE, true), alphaTest: 0.5 })
     ));
 
+    // 6) tronco: a "pontinha" azul embaixo do cérebro, como no logo.
+    //    Um cone de 3 lados (uma pirâmide) virado para baixo, com a base escondida dentro do cérebro
+    const ALTURA_TRONCO = 0.55;
+    const formaTronco = new THREE.ConeGeometry(0.24, ALTURA_TRONCO, 3);
+    const tronco = new THREE.Group();
+    tronco.add(new THREE.Mesh(
+        formaTronco,
+        new THREE.MeshLambertMaterial({ color: 0x2b4470, flatShading: true })
+    ));
+    tronco.add(new THREE.LineSegments(
+        new THREE.EdgesGeometry(formaTronco),
+        new THREE.LineBasicMaterial({ color: COR_LINHAS })
+    ));
+    // bolinha na ponta (no cone, a ponta fica em +altura/2 antes de virar)
+    tronco.add(new THREE.Points(
+        new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(0, ALTURA_TRONCO / 2, 0)]),
+        new THREE.PointsMaterial({ size: 0.55, map: criarTexturaBolinha(THREE, false), alphaTest: 0.5 })
+    ));
+    tronco.rotation.z = Math.PI;              // vira de cabeça para baixo: ponta para baixo
+    tronco.position.set(0.12, -0.95, 0.15);   // um pouco à direita do centro e para a frente
+    grupo.add(tronco);
+
     return grupo;
 }
 
@@ -214,7 +236,7 @@ async function iniciar() {
         const t = relogio.getElapsedTime();
         // balança devagar (sem dar a volta inteira: a "frente" do logo sempre aparece)
         // e vai "perseguindo" o mouse aos poucos (7% do caminho por quadro = movimento suave)
-        cerebro.rotation.y += (Math.sin(t * 0.5) * 0.5 + alvo.x - cerebro.rotation.y) * 0.07;
+        cerebro.rotation.y += (Math.sin(t * 0.5) * 0.35 + alvo.x - cerebro.rotation.y) * 0.07;
         cerebro.rotation.x += (Math.sin(t * 0.35) * 0.12 + alvo.y - cerebro.rotation.x) * 0.07;
         pintor.render(cena, camera);
     }
