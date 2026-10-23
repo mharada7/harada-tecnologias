@@ -39,6 +39,14 @@ Slogan: "Conectando a Amazônia ao Futuro".
 - GitHub Pages publica a partir de `main` / `(root)`: cada `git push` atualiza o site
   (leva cerca de 1 minuto; a CDN pode guardar a página antiga por até 10 minutos).
 - O endereço antigo (`manaus-tecnologias`) não funciona mais (404).
+- **Perfil da Empresa no Google** (criado em 23/10/2026): https://maps.google.com/?cid=13934563391409307480
+  (empresa de área de atendimento, Manaus, endereço oculto). Logo/capa do perfil ficam fora do
+  repo, em `C:\ManausTecnologias\google-perfil`.
+- **Google Search Console**: propriedade de Domínio, verificada por registro TXT
+  (`google-site-verification=...`) no DNS do Registro.br: não apagar esse TXT.
+- SEO local no site: `sitemap.xml` (só as 5 páginas reais; ao criar página nova, incluir lá),
+  `robots.txt` e dados estruturados JSON-LD `LocalBusiness` no `<head>` do `index.html`
+  (`sameAs` = Maps + Instagram; manter igual ao Perfil do Google).
 - A pasta local continua `C:\ManausTecnologias\site` (não renomeada).
 
 ## Serviço "Suporte a sistemas de PDV"
